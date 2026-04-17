@@ -1,0 +1,257 @@
+/* ==================================================
+   TABLET DEVICES (≤ 1200px)
+================================================== */
+
+@media (max-width: 992px) {
+  .navbar {
+    padding: 0 25px;
+  }
+
+  .nav-links a {
+    margin-left: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* hamburger system can be added */
+  }
+
+  .logo {
+    height: 60px;
+  }
+}
+
+/* ==================================================
+   SMALL TABLETS (≤ 992px)
+================================================== */
+
+@media (max-width: 992px) {
+  .hero {
+    height: auto;
+    padding: 120px 6%;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+}
+
+/* ==================================================
+   MOBILE DEVICES (≤ 768px)
+================================================== */
+
+@media (max-width: 768px) {
+  /* HEADER */
+  .navbar {
+    padding: 0 20px;
+    height: 65px;
+  }
+
+  body {
+    padding-top: 65px;
+  }
+
+  .logo {
+    height: 60px;
+  }
+
+  .nav-links {
+    display: none; /* Can add hamburger later */
+  }
+
+  /* HERO */
+  .hero {
+    height: auto;
+    padding: 80px 20px;
+  }
+
+  .hero h1 {
+    font-size: 26px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  /* SECTIONS */
+  .section-light,
+  .section-alt {
+    padding: 70px 20px;
+  }
+
+  /* SERVICES */
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-img {
+    height: 200px;
+  }
+
+  /* CONTACT */
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .booking-form input,
+  .booking-form select {
+    font-size: 14px;
+  }
+
+  .btn-primary {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* ==================================================
+   SMALL MOBILE (≤ 480px)
+================================================== */
+
+@media (max-width: 480px) {
+  .logo {
+    height: 50px;
+  }
+
+  .hero h1 {
+    font-size: 22px;
+  }
+
+  .hero p {
+    font-size: 13px;
+  }
+
+  .service-img {
+    height: 170px;
+  }
+
+  footer {
+    font-size: 12px;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 992px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-img {
+    height: 160px;
+  }
+}
+
+@media (max-width: 992px) {
+  .trust-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .doctor-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .trust-container {
+    grid-template-columns: 1fr;
+  }
+
+  .doctor-image img {
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .award-showcase img {
+    max-width: 100%;
+  }
+
+  .award-showcase p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .floating-contact {
+    right: 15px;
+    bottom: 100px;
+  }
+
+  .float-btn {
+    width: 48px;
+    height: 48px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-section {
+    padding: 80px 6%;
+  }
+
+  .about-title {
+    font-size: 28px;
+  }
+
+  .about-content h3 {
+    font-size: 22px;
+  }
+
+  .about-content p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .social-link {
+    width: 38px;
+    height: 38px;
+  }
+
+  .social-link img {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+@media (max-width: 992px) {
+  .contact-right {
+    padding: 35px;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 576px) {
+  .contact-right {
+    padding: 25px;
+  }
+
+  .premium-submit-btn {
+    font-size: 14px;
+  }
+}

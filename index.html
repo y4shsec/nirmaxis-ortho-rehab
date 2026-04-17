@@ -1,0 +1,1843 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NIRMAXIS — Neuro & Ortho Rehabilitation</title>
+<link rel="icon" type="image/png" href="images/FullLogo_Transparent.png">
+<meta name="description" content="Expert neuro & ortho physiotherapy at home in Ahmedabad. Stroke rehab, back pain, sports injuries & more. Book with Dr. Nirma Sankhla — +91 8488051503.">
+<meta name="keywords" content="physiotherapy home visit Ahmedabad, neuro physiotherapy, ortho physiotherapy, stroke rehabilitation, back pain treatment, sports injury physio">
+<meta name="author" content="NIRMAXIS Neuro & Ortho Rehabilitation">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+<style>
+/* ========= JOIN US ========= */
+.join-us-section { padding:100px 0; background:linear-gradient(135deg,var(--teal-dark) 0%,var(--teal) 100%); position:relative; overflow:hidden; }
+.join-grid { display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center; }
+.join-desc { font-size:16px; color:rgba(255,255,255,0.8); line-height:1.7; margin-bottom:24px; }
+.join-features { display:flex; flex-direction:column; gap:10px; margin-bottom:32px; }
+.jf-item { display:flex; align-items:center; gap:10px; font-size:15px; color:rgba(255,255,255,0.85); }
+.join-actions { display:flex; gap:14px; flex-wrap:wrap; align-items:center; }
+.btn-ghost-teal { font-size:14px; color:rgba(255,255,255,0.8); text-decoration:underline; cursor:pointer; }
+.join-us-section .section-title { color:white; }
+.join-us-section .section-label { color:var(--gold-light); }
+.join-visual { display:flex; justify-content:center; }
+.join-card-preview { background:white; border-radius:20px; padding:28px; width:300px; box-shadow:0 24px 64px rgba(0,0,0,0.25); }
+.jp-header { display:flex; align-items:center; gap:12px; margin-bottom:24px; padding-bottom:16px; border-bottom:1px solid #f0ebe0; }
+.jp-avatar { width:44px; height:44px; border-radius:50%; background:linear-gradient(135deg,var(--teal-dark),var(--teal)); display:flex; align-items:center; justify-content:center; font-size:18px; font-weight:700; color:white; }
+.jp-name { font-size:14px; font-weight:700; color:var(--teal-dark); }
+.jp-sub { font-size:11px; color:var(--text-light); }
+.jp-stats { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-bottom:20px; }
+.jp-stat { text-align:center; padding:12px 8px; background:var(--cream); border-radius:10px; }
+.jp-num { font-size:22px; font-weight:700; color:var(--teal-dark); line-height:1; }
+.jp-label { font-size:10px; color:var(--text-light); margin-top:4px; }
+.jp-next { background:var(--teal-dark); border-radius:12px; padding:14px 16px; }
+.jp-next-label { font-size:10px; color:rgba(255,255,255,0.6); text-transform:uppercase; letter-spacing:0.5px; margin-bottom:6px; }
+.jp-next-val { font-size:14px; font-weight:600; color:white; margin-bottom:4px; }
+.jp-next-service { font-size:12px; color:rgba(255,255,255,0.7); }
+/* ========= BLOGS ========= */
+.blogs-section { padding:80px 0; background:var(--warm-white); }
+.blogs-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:24px; margin-top:48px; }
+.blog-card { background:white; border:1px solid var(--border); border-radius:16px; overflow:hidden; cursor:pointer; transition:all 0.2s; box-shadow:var(--shadow-sm); }
+.blog-card:hover { transform:translateY(-4px); box-shadow:0 12px 32px rgba(26,95,122,0.15); border-color:var(--teal); }
+.blog-card-accent { height:4px; background:linear-gradient(90deg,var(--teal),var(--teal-light)); }
+.blog-card-body { padding:22px 24px; }
+.blog-category { font-size:11px; font-weight:700; letter-spacing:0.5px; background:#e8f4f8; color:var(--teal); padding:3px 10px; border-radius:50px; text-transform:uppercase; display:inline-block; margin-bottom:12px; }
+.blog-title { font-size:18px; font-weight:700; color:var(--text-dark); line-height:1.4; margin-bottom:10px; font-family:'Cormorant Garamond',serif; }
+.blog-excerpt { font-size:14px; color:var(--text-mid); line-height:1.7; margin-bottom:16px; }
+.blog-footer { display:flex; justify-content:space-between; align-items:center; }
+.blog-date { font-size:12px; color:var(--text-light); }
+.blog-read { font-size:13px; font-weight:600; color:var(--teal); }
+/* Blog modal */
+.blog-modal-overlay { position:fixed; inset:0; background:rgba(0,0,0,0.6); display:flex; align-items:center; justify-content:center; z-index:10000; padding:20px; backdrop-filter:blur(4px); }
+.blog-modal { background:white; border-radius:20px; width:100%; max-width:760px; max-height:90vh; overflow:hidden; display:flex; flex-direction:column; box-shadow:0 24px 64px rgba(0,0,0,0.25); }
+.blog-modal-header { background:linear-gradient(135deg,var(--teal-dark),var(--teal)); padding:24px 28px; display:flex; justify-content:space-between; align-items:flex-start; }
+.blog-modal-content { overflow-y:auto; flex:1; padding:28px 32px; }
+.blog-modal-content h1,.blog-modal-content h2,.blog-modal-content h3 { font-family:'Cormorant Garamond',serif; color:var(--teal-dark); margin:20px 0 10px; }
+.blog-modal-content p { font-size:15px; color:var(--text-mid); line-height:1.8; margin-bottom:14px; }
+.blog-modal-content ul,.blog-modal-content ol { padding-left:22px; margin-bottom:14px; }
+.blog-modal-content li { font-size:15px; color:var(--text-mid); line-height:1.8; margin-bottom:6px; }
+.blog-modal-content strong { color:var(--text-dark); font-weight:700; }
+.blog-modal-content blockquote { border-left:4px solid var(--teal); padding:10px 16px; margin:16px 0; background:#e8f4f8; border-radius:0 8px 8px 0; }
+.blog-modal-content table { width:100%; border-collapse:collapse; margin-bottom:16px; }
+.blog-modal-content td,.blog-modal-content th { border:1px solid var(--border); padding:8px 12px; font-size:14px; }
+.blog-modal-content th { background:var(--cream); font-weight:600; }
+.blog-modal-footer { padding:16px 28px; border-top:1px solid var(--border); display:flex; justify-content:space-between; align-items:center; background:var(--cream); }
+@media (max-width:768px) {
+  .join-grid { grid-template-columns:1fr; gap:40px; }
+  .join-visual { display:none; }
+  .blogs-grid { grid-template-columns:1fr; }
+}
+</style>
+
+<!-- Firebase — bookings + testimonials + clinic stats (dynamic) -->
+<script type="module">
+  import { initializeApp }         from "https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js";
+  import { getFirestore, collection, addDoc, getDocs, query, where, orderBy, doc, getDoc, serverTimestamp }
+    from "https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore.js";
+
+  const _cfg = {
+    apiKey:            "AIzaSyD-c374sqQnu_vHrwc9rj4czjV7fNOPXK4",
+    authDomain:        "nirmaxis-dashboard.firebaseapp.com",
+    projectId:         "nirmaxis-dashboard",
+    storageBucket:     "nirmaxis-dashboard.firebasestorage.app",
+    messagingSenderId: "822149969749",
+    appId:             "1:822149969749:web:acf9e58e5d34dbc4dde1dc"
+  };
+
+  let _app, _db;
+  try { _app = initializeApp(_cfg); _db = getFirestore(_app); } catch(e) {}
+
+  // ── Save booking form → publicBookings collection ──
+  window.saveBookingToFirestore = async function(data) {
+    if (!_db) return;
+    try {
+      await addDoc(collection(_db, "publicBookings"), {
+        ...data,
+        source:    "website",
+        status:    "pending",
+        createdAt: serverTimestamp(),
+      });
+    } catch(e) { console.error("Booking save failed:", e); }
+  };
+
+  // ── Load & render testimonials ──
+  async function loadTestimonials() {
+    const grid = document.getElementById("testimonials-grid");
+    if (!grid || !_db) return;
+    try {
+      const q    = query(collection(_db, "testimonials"), where("published","==",true), orderBy("order","asc"));
+      const snap = await getDocs(q);
+      const docs = snap.docs.map(d => ({ id: d.id, ...d.data() }));
+
+      if (docs.length === 0) {
+        grid.innerHTML = '<div style="grid-column:1/-1;text-align:center;padding:48px;color:var(--text-light);font-size:14px;">No reviews yet.</div>';
+        return;
+      }
+
+      grid.innerHTML = docs.map(function(t, i) {
+        var stars = Array((t.rating || 5) + 1).join("★");
+        var isFeatured = i === 1 ? ' featured' : '';
+        var initial = ((t.name || "P").charAt(0) || "P").toUpperCase();
+        return '<div class="testi-card' + isFeatured + '">' +
+          '<div class="testi-stars">' + stars + '</div>' +
+          '<p>"' + (t.review || "").replace(/</g, "&lt;").replace(/>/g, "&gt;") + '"</p>' +
+          '<div class="testi-author">' +
+            '<div class="testi-avatar">' + initial + '</div>' +
+            '<div>' +
+              '<strong>' + (t.name || "").replace(/</g, "&lt;") + '</strong>' +
+              '<span>' + (t.service || "").replace(/</g, "&lt;") + '</span>' +
+            '</div>' +
+          '</div>' +
+        '</div>';
+      }).join("");
+    } catch(e) {
+      console.error("Testimonials load failed:", e);
+      grid.innerHTML = '<div style="grid-column:1/-1;text-align:center;padding:48px;color:var(--text-light);">Could not load reviews.</div>';
+    }
+  }
+
+  // ── Load clinic stats → update hero + about + counters ──
+  async function loadClinicStats() {
+    if (!_db) return;
+    try {
+      const snap = await getDoc(doc(_db, "settings", "clinic"));
+      if (!snap.exists()) return;
+      const s = snap.data();
+
+      // Hero stats
+      if (s.patientsCount)   { const el = document.getElementById("stat-patients");   if (el) el.textContent = s.patientsCount; }
+      if (s.yearsExperience) { const el = document.getElementById("stat-years");       if (el) el.textContent = s.yearsExperience; }
+      if (s.successRate)     { const el = document.getElementById("stat-success");     if (el) el.textContent = s.successRate; }
+
+      // About accent-num
+      if (s.yearsExperience) { const el = document.getElementById("stat-years-about"); if (el) el.textContent = s.yearsExperience; }
+
+      // Stats section counters — update data-target then re-trigger animation
+      const counterMap = {
+        "patients-treated":   s.patientsCount,
+        "years-experience":   s.yearsExperience,
+        "expert-therapists":  s.therapistsCount,
+        "recovery-success":   s.successRate,
+      };
+      document.querySelectorAll(".counter").forEach(el => {
+        const id = el.id.replace("stat-counter-","");
+        const val = counterMap[id];
+        if (val) {
+          const num = parseInt(val.toString().replace(/\D/g,"")) || 0;
+          el.setAttribute("data-target", num);
+          el.textContent = val;
+        }
+      });
+    } catch(e) { console.error("Stats load failed:", e); }
+  }
+
+  document.addEventListener("DOMContentLoaded", function() {
+    loadTestimonials();
+    loadClinicStats();
+  });
+</script>
+</head>
+<body>
+
+<!-- ========= HEADER ========= -->
+<header class="header" id="header">
+  <div class="header-inner">
+
+    <!-- LOGO -->
+    <a href="#home" class="logo">
+      <img src="images/FullLogo_Transparent.png" alt="NIRMAXIS Logo" class="header-logo-img">
+    </a>
+
+    <!-- NAV MENU -->
+    <ul class="nav-menu">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+
+      <!-- ======= SERVICES MEGA MENU (Premium) ======= -->
+      <li class="mega-wrapper" id="megaWrapper">
+        <button class="mega-trigger" id="megaTrigger"
+          aria-haspopup="true" aria-expanded="false" aria-controls="megaPanel">
+          Services
+          <i class="fas fa-chevron-down chevron" aria-hidden="true"></i>
+        </button>
+        <!-- mega-panel moved to body -->
+      </li><!-- /mega-wrapper -->
+
+      <li><a href="#blogs">Blogs</a></li>
+      <li><a href="#testimonials">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <a href="#contact" class="header-cta">Book Now</a>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ======= MOBILE NAV ======= -->
+<div class="mobile-nav" id="mobileNav">
+  <ul class="mobile-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+
+    <!-- Services accordion -->
+    <li>
+      <button class="mobile-top" id="mobileServicesTrigger"
+        aria-expanded="false" aria-controls="mobileServicesAccordion">
+        <i class="fas fa-stethoscope" style="color:var(--teal);font-size:14px;"></i>
+        Services
+        <i class="fas fa-chevron-down mobile-chevron"></i>
+      </button>
+      <div class="mobile-services-accordion" id="mobileServicesAccordion">
+
+        <div class="mob-category">
+          <button class="mob-cat-btn" aria-expanded="false">
+            <div class="mob-cat-icon"><i class="fas fa-brain"></i></div>
+            Neurological Rehabilitation
+            <i class="fas fa-chevron-down mob-cat-chevron"></i>
+          </button>
+          <div class="mob-cat-items">
+            <a href="#" onclick="openService('neuro');return false;">Stroke — Hemiplegia / Hemiparesis</a>
+            <a href="#" onclick="openService('neuro');return false;">Parkinson's Disease</a>
+            <a href="#" onclick="openService('neuro');return false;">Degenerative Diseases</a>
+            <a href="#" onclick="openService('neuro');return false;">Multiple Sclerosis</a>
+            <a href="#" onclick="openService('neuro');return false;">Traumatic Brain Injuries</a>
+            <a href="#" onclick="openService('neuro');return false;">Ataxia</a>
+            <a href="#" onclick="openService('neuro');return false;">Spinal Cord Injuries</a>
+          </div>
+        </div>
+
+        <div class="mob-category">
+          <button class="mob-cat-btn" aria-expanded="false">
+            <div class="mob-cat-icon"><i class="fas fa-network-wired"></i></div>
+            Nerve Conditions
+            <i class="fas fa-chevron-down mob-cat-chevron"></i>
+          </button>
+          <div class="mob-cat-items">
+            <a href="#" onclick="openService('neuro');return false;">Bell's Palsy</a>
+            <a href="#" onclick="openService('neuro');return false;">Peripheral Neuropathy</a>
+            <a href="#" onclick="openService('neuro');return false;">Guillain-Barré Syndrome</a>
+            <a href="#" onclick="openService('neuro');return false;">Nerve Injury / Brachial Plexus</a>
+            <a href="#" onclick="openService('neuro');return false;">Nerve Entrapment</a>
+          </div>
+        </div>
+
+        <div class="mob-category">
+          <button class="mob-cat-btn" aria-expanded="false">
+            <div class="mob-cat-icon"><i class="fas fa-bone"></i></div>
+            Orthopaedic &amp; MSK
+            <i class="fas fa-chevron-down mob-cat-chevron"></i>
+          </button>
+          <div class="mob-cat-items">
+            <div class="mob-cat-group"><div class="mob-cat-group-title">Back &amp; Neck</div>
+              <a href="#" onclick="openService('ortho');return false;">Sciatica</a>
+              <a href="#" onclick="openService('ortho');return false;">Herniated Disc</a>
+              <a href="#" onclick="openService('ortho');return false;">Chronic Lower Back Pain</a>
+              <a href="#" onclick="openService('ortho');return false;">Tech Neck / Cervical Pain</a>
+            </div>
+            <div class="mob-cat-group"><div class="mob-cat-group-title">Spine</div>
+              <a href="#" onclick="openService('ortho');return false;">Radiculopathy</a>
+              <a href="#" onclick="openService('ortho');return false;">Spondylitis</a>
+            </div>
+            <div class="mob-cat-group"><div class="mob-cat-group-title">Joints</div>
+              <a href="#" onclick="openService('ortho');return false;">Osteoarthritis (OA)</a>
+              <a href="#" onclick="openService('ortho');return false;">Rheumatoid Arthritis</a>
+              <a href="#" onclick="openService('ortho');return false;">Gout</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="mob-category">
+          <button class="mob-cat-btn" aria-expanded="false">
+            <div class="mob-cat-icon"><i class="fas fa-person-running"></i></div>
+            Sports Injuries
+            <i class="fas fa-chevron-down mob-cat-chevron"></i>
+          </button>
+          <div class="mob-cat-items">
+            <a href="#" onclick="openService('sports');return false;">ACL / MCL / PCL Injuries</a>
+            <a href="#" onclick="openService('sports');return false;">Meniscus Injury</a>
+            <a href="#" onclick="openService('sports');return false;">Rotator Cuff Injury</a>
+            <a href="#" onclick="openService('sports');return false;">Shoulder Dislocation</a>
+            <a href="#" onclick="openService('sports');return false;">Tennis Elbow</a>
+            <a href="#" onclick="openService('sports');return false;">Golfer's Elbow</a>
+            <a href="#" onclick="openService('sports');return false;">Ankle Sprain</a>
+          </div>
+        </div>
+
+        <div class="mob-category">
+          <button class="mob-cat-btn" aria-expanded="false">
+            <div class="mob-cat-icon"><i class="fas fa-dumbbell"></i></div>
+            Muscular Conditions
+            <i class="fas fa-chevron-down mob-cat-chevron"></i>
+          </button>
+          <div class="mob-cat-items">
+            <a href="#" onclick="openService('ortho');return false;">Frozen Shoulder / Adhesive Capsulitis</a>
+            <a href="#" onclick="openService('ortho');return false;">Fibromyalgia</a>
+            <a href="#" onclick="openService('ortho');return false;">Muscle Strains &amp; Tendonitis</a>
+            <a href="#" onclick="openService('ortho');return false;">Hamstring Strain</a>
+            <a href="#" onclick="openService('ortho');return false;">Posture Correction</a>
+          </div>
+        </div>
+
+        <div class="mob-category">
+          <button class="mob-cat-btn" aria-expanded="false">
+            <div class="mob-cat-icon"><i class="fas fa-kit-medical"></i></div>
+            Post-Surgical Rehab
+            <i class="fas fa-chevron-down mob-cat-chevron"></i>
+          </button>
+          <div class="mob-cat-items">
+            <a href="#" onclick="openService('postsurgery');return false;">Total Knee Replacement (TKR)</a>
+            <a href="#" onclick="openService('postsurgery');return false;">Total Hip Replacement (THR)</a>
+            <a href="#" onclick="openService('postsurgery');return false;">Fracture Fixation</a>
+            <a href="#" onclick="openService('postsurgery');return false;">Tendon Repair Surgery</a>
+            <a href="#" onclick="openService('postsurgery');return false;">ACL / PCL Reconstruction</a>
+            <a href="#" onclick="openService('postsurgery');return false;">Spinal Surgery Rehab</a>
+          </div>
+        </div>
+
+        <div class="mob-category">
+          <button class="mob-cat-btn" aria-expanded="false">
+            <div class="mob-cat-icon"><i class="fas fa-baby"></i></div>
+            Paediatric Physiotherapy
+            <i class="fas fa-chevron-down mob-cat-chevron"></i>
+          </button>
+          <div class="mob-cat-items">
+            <a href="#" onclick="openService('pediatric');return false;">Cerebral Palsy</a>
+            <a href="#" onclick="openService('pediatric');return false;">Developmental Delays</a>
+            <a href="#" onclick="openService('pediatric');return false;">Congenital Torticollis</a>
+            <a href="#" onclick="openService('pediatric');return false;">TEV / Club Foot</a>
+            <a href="#" onclick="openService('pediatric');return false;">Erb's Palsy</a>
+          </div>
+        </div>
+
+        <div class="mob-category">
+          <button class="mob-cat-btn" aria-expanded="false">
+            <div class="mob-cat-icon"><i class="fas fa-person-cane"></i></div>
+            Geriatric Care
+            <i class="fas fa-chevron-down mob-cat-chevron"></i>
+          </button>
+          <div class="mob-cat-items">
+            <a href="#" onclick="openService('geriatric');return false;">Fall Prevention</a>
+            <a href="#" onclick="openService('geriatric');return false;">Osteoporosis Management</a>
+            <a href="#" onclick="openService('geriatric');return false;">Balance &amp; Gait Problems</a>
+            <a href="#" onclick="openService('geriatric');return false;">Age-related Muscle Weakness</a>
+          </div>
+        </div>
+
+        <div class="mob-category">
+          <button class="mob-cat-btn" aria-expanded="false">
+            <div class="mob-cat-icon"><i class="fas fa-heart"></i></div>
+            Women's Health
+            <i class="fas fa-chevron-down mob-cat-chevron"></i>
+          </button>
+          <div class="mob-cat-items">
+            <a href="#" onclick="openService('womens');return false;">Pelvic Floor Dysfunction</a>
+            <a href="#" onclick="openService('womens');return false;">Prenatal Care</a>
+            <a href="#" onclick="openService('womens');return false;">Post-Natal Care</a>
+            <a href="#" onclick="openService('womens');return false;">Urinary Incontinence</a>
+            <a href="#" onclick="openService('womens');return false;">Post C-Section Rehab</a>
+          </div>
+        </div>
+
+      </div><!-- /mobile-services-accordion -->
+    </li>
+
+    <li><a href="#blogs">Blogs</a></li>
+    <li><a href="#testimonials">Reviews</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="mobile-cta-row">
+    <a href="tel:+918488051503" class="mob-cta-btn mob-cta-secondary"><i class="fas fa-phone" style="margin-right:6px;"></i>Call Us</a>
+    <a href="#contact" class="mob-cta-btn mob-cta-primary"><i class="fas fa-calendar-check" style="margin-right:6px;"></i>Book Now</a>
+  </div>
+</div>
+
+<!-- ========= SERVICE DETAIL MODAL ========= -->
+<div class="svc-modal-overlay" id="svcOverlay" onclick="closeService(event)">
+  <div class="svc-modal" id="svcModal" onclick="event.stopPropagation()">
+    <div class="svc-modal-body" id="svcBody"></div>
+  </div>
+</div>
+
+<!-- ========= HERO ========= -->
+<section class="hero" id="home">
+  <div class="hero-bg-shapes">
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+    <div class="shape shape-3"></div>
+  </div>
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-eyebrow">
+        <span class="dot"></span> Ahmedabad's Trusted Home Visit Physiotherapy
+      </div>
+      <h1 class="hero-title">
+        Restore Movement.<br>
+        <em>Reclaim Life.</em>
+      </h1>
+      <p class="hero-desc">
+        Specialized Neuro & Ortho rehabilitation delivered at your doorstep by certified physiotherapists. Advanced care, personal attention, lasting recovery.
+      </p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn-primary">Book Home Visit</a>
+        <a href="#services" class="btn-ghost">Explore Services</a>
+      </div>
+      <div class="hero-stats" id="hero-stats">
+        <div class="hstat">
+          <strong id="stat-patients">100+</strong>
+          <span>Patients Healed</span>
+        </div>
+        <div class="hstat-div"></div>
+        <div class="hstat">
+          <strong id="stat-years">3+</strong>
+          <span>Years Experience</span>
+        </div>
+        <div class="hstat-div"></div>
+        <div class="hstat">
+          <strong id="stat-success">98%</strong>
+          <span>Success Rate</span>
+        </div>
+      </div>
+    </div>
+      <div class="hero-visual">
+      <div class="hero-card-float card-1">
+        <i class="fas fa-home"></i>
+        <span>Home Visit Available</span>
+      </div>
+      <div class="hero-card-float card-2">
+        <i class="fas fa-certificate"></i>
+        <span>BPT Certified</span>
+      </div>
+      <div class="hero-img-wrap">
+        <img src="images/physiotherapy.png" alt="Home Physiotherapy Care" class="hero-img">
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+  </div>
+</section>
+
+<!-- ========= SERVICES ========= -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-header centered">
+      <div class="section-label">What We Treat</div>
+      <h2 class="section-title">Our Specialities</h2>
+      <p class="section-desc">From neurological conditions to sports injuries — comprehensive physiotherapy under one expert.</p>
+    </div>
+    <div class="services-grid">
+
+      <div class="service-card" onclick="openService('neuro')" role="button" tabindex="0">
+        <div class="sc-icon">🧠</div>
+        <h3>Neuro Physiotherapy</h3>
+        <p>Stroke rehabilitation, Parkinson's disease, spinal cord injuries, and neurological disorders affecting movement and balance.</p>
+        <div class="sc-tags"><span>Stroke</span><span>Parkinson's</span><span>MS</span></div>
+        <div class="sc-arrow"><i class="fas fa-arrow-right"></i></div>
+      </div>
+
+      <div class="service-card featured" onclick="openService('ortho')" role="button" tabindex="0">
+        <div class="sc-badge">Most Popular</div>
+        <div class="sc-icon">🦴</div>
+        <h3>Orthopedic Physiotherapy</h3>
+        <p>Back pain, neck pain, knee injuries, joint rehabilitation, and musculoskeletal disorders with advanced manual therapy.</p>
+        <div class="sc-tags"><span>Back Pain</span><span>Knee</span><span>Joint</span></div>
+        <div class="sc-arrow"><i class="fas fa-arrow-right"></i></div>
+      </div>
+
+      <div class="service-card" onclick="openService('sports')" role="button" tabindex="0">
+        <div class="sc-icon">🏃</div>
+        <h3>Sports Physiotherapy</h3>
+        <p>ACL injuries, ligament sprains, tennis elbow, runner's knee, and complete return-to-sport rehabilitation programs.</p>
+        <div class="sc-tags"><span>ACL</span><span>Sprains</span><span>Performance</span></div>
+        <div class="sc-arrow"><i class="fas fa-arrow-right"></i></div>
+      </div>
+
+      <div class="service-card" onclick="openService('pediatric')" role="button" tabindex="0">
+        <div class="sc-icon">👶</div>
+        <h3>Paediatric Physiotherapy</h3>
+        <p>Cerebral palsy, developmental delays, Down syndrome, muscular dystrophy — gentle specialized care for children.</p>
+        <div class="sc-tags"><span>Cerebral Palsy</span><span>Development</span></div>
+        <div class="sc-arrow"><i class="fas fa-arrow-right"></i></div>
+      </div>
+
+      <div class="service-card" onclick="openService('postsurgery')" role="button" tabindex="0">
+        <div class="sc-icon">💊</div>
+        <h3>Post-Surgery Rehab</h3>
+        <p>Complete recovery after TKR, THR, ACL reconstruction, spinal surgeries, and all orthopedic procedures.</p>
+        <div class="sc-tags"><span>TKR/THR</span><span>Spine</span><span>ORIF</span></div>
+        <div class="sc-arrow"><i class="fas fa-arrow-right"></i></div>
+      </div>
+
+      <div class="service-card" onclick="openService('geriatric')" role="button" tabindex="0">
+        <div class="sc-icon">🧓</div>
+        <h3>Geriatric Care</h3>
+        <p>Fall prevention, osteoporosis management, balance training, and mobility rehab for seniors to stay safe and independent.</p>
+        <div class="sc-tags"><span>Fall Prevention</span><span>Balance</span></div>
+        <div class="sc-arrow"><i class="fas fa-arrow-right"></i></div>
+      </div>
+
+      <div class="service-card" onclick="openService('womens')" role="button" tabindex="0">
+        <div class="sc-icon">🌸</div>
+        <h3>Women's Health</h3>
+        <p>Pelvic floor dysfunction, prenatal & postnatal care, post C-section rehab, and specialist women's physiotherapy.</p>
+        <div class="sc-tags"><span>Pelvic Floor</span><span>Prenatal</span></div>
+        <div class="sc-arrow"><i class="fas fa-arrow-right"></i></div>
+      </div>
+
+      <div class="service-card home-visit-card" role="button" tabindex="0" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+        <div class="sc-icon">🏠</div>
+        <h3>Home Visit Service</h3>
+        <p>Professional physiotherapy at your doorstep across Ahmedabad — Bodakdev, Satellite, Vastrapur, Thaltej, Prahlad Nagar & more.</p>
+        <span class="btn-primary sm" style="display:inline-block;margin-top:8px;">Book Home Visit</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ========= STATS ========= -->
+<section class="stats-section">
+  <div class="stats-inner">
+    <div class="stat-item">
+      <div class="stat-num"><span class="counter" data-target="100">—</span>+</div>
+      <div class="stat-label">Patients Treated</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num"><span class="counter" data-target="3">—</span>+</div>
+      <div class="stat-label">Years Experience</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num"><span class="counter" data-target="1">—</span></div>
+      <div class="stat-label">Expert Therapists</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num"><span class="counter" data-target="98">—</span>%</div>
+      <div class="stat-label">Recovery Success</div>
+    </div>
+  </div>
+</section>
+
+<!-- ========= DOCTOR ========= -->
+<section class="doctor-section">
+  <div class="container">
+    <div class="doctor-grid">
+      <div class="doctor-content">
+        <div class="section-label">Meet Your Specialist</div>
+        <h2 class="section-title">Dr. Nirma Sankhla</h2>
+        <div class="doctor-qualif">BPT | Neuro & Ortho Rehabilitation Specialist</div>
+        <p class="doctor-desc">
+          Dr. Nirma Sankhla is a dedicated physiotherapy expert with over 8 years of specialized experience in neurological and orthopedic rehabilitation. Her patient-first approach combines evidence-based techniques with genuine compassion.
+        </p>
+        <p class="doctor-desc">
+          Trained in advanced neuro-rehabilitation protocols, she has helped hundreds of patients recover from strokes, spinal injuries, and complex orthopedic conditions — restoring their independence and quality of life.
+        </p>
+        <div class="doctor-creds">
+          <div class="cred-item"><i class="fas fa-graduation-cap"></i> Bachelor of Physiotherapy (BPT)</div>
+          <div class="cred-item"><i class="fas fa-award"></i> Patient's Choice Award — Ortho Department</div>
+          <div class="cred-item"><i class="fas fa-hospital"></i> Specialized in Neuro & Ortho Rehab</div>
+          <div class="cred-item"><i class="fas fa-map-marker-alt"></i> Serving Ahmedabad, Gujarat</div>
+        </div>
+        <a href="#contact" class="btn-primary">Book with Dr. Nirma</a>
+      </div>
+      <div class="doctor-image">
+        <div class="doc-img-wrap">
+          <img src="images/doctor.png" alt="Dr. Nirma Sankhla" style="width:100%;height:480px;object-fit:cover;object-position:top;display:block;">
+        </div>
+        <div class="doc-award">
+          <i class="fas fa-award"></i>
+          <div>
+            <strong>Patient's Choice Award</strong>
+            <span>Ortho Specialist</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ========= JOIN US ========= -->
+<section class="join-us-section" id="join">
+  <div class="container">
+    <div class="join-grid">
+      <div class="join-content">
+        <div class="section-label">Patient Portal</div>
+        <h2 class="section-title">Track Your Recovery Journey</h2>
+        <p class="join-desc">
+          Create your personal account to book appointments online, view your treatment history, and stay connected with Dr. Nirma Sankhla throughout your recovery.
+        </p>
+        <div class="join-features">
+          <div class="jf-item"><span>✅</span> Book appointments anytime</div>
+          <div class="jf-item"><span>✅</span> View treatment history</div>
+          <div class="jf-item"><span>✅</span> Track your progress</div>
+          <div class="jf-item"><span>✅</span> Get appointment reminders</div>
+        </div>
+        <div class="join-actions">
+          <a href="http://localhost:3000/login?signup=true" class="btn-primary" target="_blank">Create Patient Account →</a>
+          <a href="http://localhost:3000/login" class="btn-ghost-teal" target="_blank">Already have account? Login</a>
+        </div>
+      </div>
+      <div class="join-visual">
+        <div class="join-card-preview">
+          <div class="jp-header">
+            <div class="jp-avatar">P</div>
+            <div>
+              <div class="jp-name">Patient Portal</div>
+              <div class="jp-sub">NIRMAXIS Dashboard</div>
+            </div>
+          </div>
+          <div class="jp-stats">
+            <div class="jp-stat"><div class="jp-num">3</div><div class="jp-label">Sessions Done</div></div>
+            <div class="jp-stat"><div class="jp-num">1</div><div class="jp-label">Upcoming</div></div>
+            <div class="jp-stat"><div class="jp-num">98%</div><div class="jp-label">Progress</div></div>
+          </div>
+          <div class="jp-next">
+            <div class="jp-next-label">Next Session</div>
+            <div class="jp-next-val">📅 Tomorrow, 10:00 AM</div>
+            <div class="jp-next-service">Neuro Physiotherapy</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========= BLOGS ========= -->
+<section class="blogs-section" id="blogs">
+  <div class="container">
+    <div class="section-header centered">
+      <div class="section-label">Health & Wellness</div>
+      <h2 class="section-title">Insights & Articles</h2>
+      <p class="section-desc">Expert tips, patient stories and rehabilitation insights from Dr. Nirma Sankhla.</p>
+    </div>
+    <div id="blogs-grid" class="blogs-grid">
+      <div style="text-align:center;padding:40px;color:var(--text-light);font-size:14px;">Loading articles...</div>
+    </div>
+  </div>
+</section>
+
+<!-- ========= HOW IT WORKS ========= -->
+<section class="how-section">
+  <div class="container">
+    <div class="section-header centered">
+      <div class="section-label">Simple Process</div>
+      <h2 class="section-title">How Home Visit Works</h2>
+    </div>
+    <div class="steps-row">
+      <div class="step-item">
+        <div class="step-num">01</div>
+        <div class="step-icon"><i class="fas fa-phone-alt"></i></div>
+        <h3>Book Appointment</h3>
+        <p>Call, WhatsApp or fill the booking form. Choose your preferred time and date.</p>
+      </div>
+      <div class="step-connector"></div>
+      <div class="step-item">
+        <div class="step-num">02</div>
+        <div class="step-icon"><i class="fas fa-clipboard-check"></i></div>
+        <h3>Confirmation</h3>
+        <p>Receive appointment confirmation via email and WhatsApp within minutes.</p>
+      </div>
+      <div class="step-connector"></div>
+      <div class="step-item">
+        <div class="step-num">03</div>
+        <div class="step-icon"><i class="fas fa-home"></i></div>
+        <h3>We Come to You</h3>
+        <p>Our certified physiotherapist arrives at your home at the scheduled time.</p>
+      </div>
+      <div class="step-connector"></div>
+      <div class="step-item">
+        <div class="step-num">04</div>
+        <div class="step-icon"><i class="fas fa-heartbeat"></i></div>
+        <h3>Recover & Heal</h3>
+        <p>Receive personalized treatment, exercises and a complete recovery plan.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========= TESTIMONIALS ========= -->
+<section class="testimonials" id="testimonials">
+  <div class="container">
+    <div class="section-header centered">
+      <div class="section-label">Patient Stories</div>
+      <h2 class="section-title">What Our Patients Say</h2>
+    </div>
+    <div class="testi-grid" id="testimonials-grid">
+      <div style="grid-column:1/-1;text-align:center;padding:48px;color:var(--text-light);font-size:14px;">Loading reviews...</div>
+    </div>
+  </div>
+</section>
+
+<!-- ========= AREAS ========= -->
+<section class="areas-section">
+  <div class="container">
+    <div class="section-header centered">
+      <div class="section-label">Coverage</div>
+      <h2 class="section-title">Areas We Serve in Ahmedabad</h2>
+      <p class="section-desc">Search your area to check if we cover your location.</p>
+    </div>
+
+    <!-- Area Pills -->
+    <div class="areas-grid">
+      <div class="area-pill"><i class="fas fa-map-marker-alt"></i> Bodakdev</div>
+      <div class="area-pill"><i class="fas fa-map-marker-alt"></i> Satellite</div>
+      <div class="area-pill"><i class="fas fa-map-marker-alt"></i> Vastrapur</div>
+      <div class="area-pill"><i class="fas fa-map-marker-alt"></i> Thaltej</div>
+      <div class="area-pill"><i class="fas fa-map-marker-alt"></i> Prahlad Nagar</div>
+      <div class="area-pill"><i class="fas fa-map-marker-alt"></i> Navrangpura</div>
+      <div class="area-pill"><i class="fas fa-map-marker-alt"></i> Maninagar</div>
+      <div class="area-pill"><i class="fas fa-map-marker-alt"></i> Paldi</div>
+      <div class="area-pill nearby"><i class="fas fa-map-marker-alt"></i> + Nearby Areas</div>
+    </div>
+  </div>
+
+  <!-- ── Full-width cinematic map ── -->
+  <div class="map-cinema-wrap">
+
+    <!-- Floating Search Card -->
+    <div class="map-search-card" id="mapSearchCard">
+      <div class="map-search-top">
+        <i class="fas fa-map-marker-alt" style="color:var(--teal);font-size:16px;"></i>
+        <input
+          id="map-search-input"
+          type="text"
+          placeholder="Search your area... e.g. Bopal, Gota, Sola"
+          autocomplete="off"
+          oninput="handleMapSearch(this.value)"
+          onkeydown="if(event.key==='Enter'){doMapSearch(this.value)}"
+        />
+        <button onclick="doMapSearch(document.getElementById('map-search-input').value)" class="map-search-btn">
+          <i class="fas fa-search"></i> Check
+        </button>
+      </div>
+      <!-- Suggestions -->
+      <div id="map-suggestions"></div>
+      <!-- Quick chips -->
+      <div class="map-quick-row">
+        <span class="map-quick-label">Quick:</span>
+        <button onclick="doMapSearch('Bodakdev')" class="map-qbtn">Bodakdev</button>
+        <button onclick="doMapSearch('Satellite')" class="map-qbtn">Satellite</button>
+        <button onclick="doMapSearch('Vastrapur')" class="map-qbtn">Vastrapur</button>
+        <button onclick="doMapSearch('Thaltej')" class="map-qbtn">Thaltej</button>
+        <button onclick="doMapSearch('Prahlad Nagar')" class="map-qbtn">Prahlad Nagar</button>
+        <button onclick="doMapSearch('Bopal')" class="map-qbtn">Bopal</button>
+        <button onclick="doMapSearch('Navrangpura')" class="map-qbtn">Navrangpura</button>
+      </div>
+    </div>
+
+    <!-- Map -->
+    <iframe
+      id="nirmaxis-map"
+      src="https://www.openstreetmap.org/export/embed.html?bbox=72.4500%2C22.9500%2C72.7000%2C23.1500&layer=mapnik&marker=23.0225%2C72.5714"
+      style="width:100%;height:500px;border:none;display:block;"
+      title="NIRMAXIS Service Area Map"
+    ></iframe>
+
+    <!-- Result Toast — Available -->
+    <div class="map-toast map-toast-yes" id="toastYes">
+      <div class="toast-icon-wrap"><i class="fas fa-check-circle"></i></div>
+      <div>
+        <div class="toast-title">We cover <span id="toastAreaYes"></span>!</div>
+        <div class="toast-sub">Book your home visit now</div>
+      </div>
+      <a href="#contact" class="toast-btn-yes">Book Now →</a>
+    </div>
+
+    <!-- Result Toast — Not Available -->
+    <div class="map-toast map-toast-no" id="toastNo">
+      <div class="toast-icon-wrap toast-icon-no"><i class="fas fa-location-dot"></i></div>
+      <div style="flex:1;">
+        <div class="toast-title" style="color:#b71c1c;">Not yet in <span id="toastAreaNo"></span></div>
+        <div class="toast-sub">Help us expand — request your area!</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Request Area Panel (slides in when not available) -->
+  <div class="request-area-panel" id="requestPanel">
+    <div class="rap-inner">
+      <div class="rap-icon">📍</div>
+      <h3 class="rap-title">Request Coverage for <span id="rapAreaName"></span></h3>
+      <p class="rap-desc">We're expanding fast! Share your details and we'll notify you when we reach your area — or call us, we may already be able to help.</p>
+      <div class="rap-actions">
+        <a href="tel:+918488051503" class="rap-btn-primary">
+          <i class="fas fa-phone"></i> Call Us Now
+        </a>
+        <a href="https://wa.me/918488051503?text=Hi%2C%20I%20would%20like%20physiotherapy%20services%20in%20" id="rapWhatsApp" target="_blank" class="rap-btn-wa">
+          <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+      </div>
+      <button onclick="closeRequestPanel()" class="rap-dismiss">Maybe later</button>
+    </div>
+  </div>
+
+</section>
+
+<style>
+/* ── Cinema Map ── */
+.map-cinema-wrap {
+  position: relative;
+  width: 100%;
+  margin-top: 32px;
+  overflow: hidden;
+}
+.map-cinema-wrap iframe {
+  width: 100%;
+  height: 500px;
+  border: none;
+  display: block;
+  filter: saturate(0.9) brightness(0.97);
+}
+@media(max-width:768px) {
+  .map-cinema-wrap iframe { height: 380px; }
+}
+
+/* ── Floating Search Card ── */
+.map-search-card {
+  position: relative;
+  margin: 0 auto 16px; /* spacing above map */
+  left: auto;
+  top: auto;
+  transform: none;
+
+  width: min(560px, calc(100% - 32px));
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.12);
+  z-index: 1;
+  overflow: hidden;
+  border: 1px solid #e0ece8;
+}
+.map-search-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 16px;
+  border-bottom: 1px solid #f0ede5;
+}
+.map-search-top input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  color: #333;
+  font-family: inherit;
+  background: transparent;
+}
+.map-search-btn {
+  background: var(--teal);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+.map-search-btn:hover { background: var(--teal-dark); }
+
+/* Suggestions */
+#map-suggestions {
+  display: none;
+  max-height: 180px;
+  overflow-y: auto;
+  border-bottom: 1px solid #f0ede5;
+}
+#map-suggestions::-webkit-scrollbar { width: 4px; }
+#map-suggestions::-webkit-scrollbar-thumb { background: #ccc; border-radius: 4px; }
+
+/* Quick chips */
+.map-quick-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 10px 14px;
+  align-items: center;
+  background: #fafaf8;
+}
+.map-quick-label { font-size: 11px; color: #aaa; margin-right: 2px; }
+.map-qbtn {
+  background: white;
+  border: 1.5px solid #d4e8e0;
+  border-radius: 50px;
+  padding: 4px 12px;
+  font-size: 12px;
+  color: var(--teal-dark);
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 500;
+  transition: all 0.15s;
+}
+.map-qbtn:hover { background: var(--teal); color: white; border-color: var(--teal); }
+
+/* ── Toasts ── */
+.map-toast {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(80px);
+  opacity: 0;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  border-radius: 14px;
+  padding: 14px 20px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  min-width: 300px;
+  max-width: calc(100% - 40px);
+  transition: transform 0.4s cubic-bezier(0.34,1.56,0.64,1), opacity 0.3s ease;
+  z-index: 20;
+}
+.map-toast.show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+.map-toast-yes { background: #e8f5e9; border: 1.5px solid #66bb6a; }
+.map-toast-no  { background: #ffebee; border: 1.5px solid #ef9a9a; }
+.toast-icon-wrap { font-size: 28px; color: #2e7d32; flex-shrink: 0; }
+.toast-icon-no   { color: #c62828 !important; }
+.toast-title { font-size: 15px; font-weight: 700; color: #1b5e20; margin-bottom: 2px; }
+.toast-sub   { font-size: 12px; color: #388e3c; }
+.map-toast-no .toast-sub { color: #c62828; }
+.toast-btn-yes {
+  background: var(--teal);
+  color: white;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background 0.2s;
+}
+.toast-btn-yes:hover { background: var(--teal-dark); }
+
+/* ── Request Area Panel ── */
+.request-area-panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s cubic-bezier(0.4,0,0.2,1), opacity 0.4s ease;
+  opacity: 0;
+  background: linear-gradient(135deg, #fff8f8 0%, #fff5f5 100%);
+  border-top: 2px solid #ffcdd2;
+}
+.request-area-panel.open {
+  max-height: 400px;
+  opacity: 1;
+}
+.rap-inner {
+  text-align: center;
+  padding: 40px 24px 36px;
+  animation: rapSlideIn 0.5s ease 0.2s both;
+}
+@keyframes rapSlideIn {
+  from { transform: translateY(20px); opacity: 0; }
+  to   { transform: translateY(0); opacity: 1; }
+}
+.rap-icon { font-size: 44px; margin-bottom: 12px; animation: rapBounce 1s ease 0.5s both; }
+@keyframes rapBounce {
+  0%   { transform: scale(0.5); opacity: 0; }
+  70%  { transform: scale(1.15); }
+  100% { transform: scale(1); opacity: 1; }
+}
+.rap-title { font-size: 22px; font-weight: 700; color: var(--teal-dark); margin-bottom: 10px; font-family: "Cormorant Garamond", serif; }
+.rap-title span { color: #c62828; }
+.rap-desc  { font-size: 14px; color: #666; line-height: 1.7; max-width: 480px; margin: 0 auto 24px; }
+.rap-actions { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-bottom: 16px; }
+.rap-btn-primary {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--teal); color: white;
+  border-radius: 10px; padding: 12px 24px;
+  font-size: 14px; font-weight: 600;
+  text-decoration: none; transition: all 0.2s;
+  animation: rapPulse 2s ease 1s infinite;
+}
+@keyframes rapPulse {
+  0%,100% { box-shadow: 0 0 0 0 rgba(26,95,122,0.4); }
+  50%      { box-shadow: 0 0 0 8px rgba(26,95,122,0); }
+}
+.rap-btn-primary:hover { background: var(--teal-dark); transform: translateY(-1px); }
+.rap-btn-wa {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: #25d366; color: white;
+  border-radius: 10px; padding: 12px 24px;
+  font-size: 14px; font-weight: 600;
+  text-decoration: none; transition: all 0.2s;
+}
+.rap-btn-wa:hover { background: #1da851; transform: translateY(-1px); }
+.rap-dismiss {
+  background: none; border: none; color: #aaa;
+  font-size: 13px; cursor: pointer; font-family: inherit;
+  text-decoration: underline;
+}
+.rap-dismiss:hover { color: #666; }
+</style>
+
+<script>
+(function() {
+  var COVERED = [
+    "bodakdev","satellite","vastrapur","thaltej","prahlad nagar","navrangpura",
+    "maninagar","paldi","bopal","ghatlodiya","gota","chandkheda","motera",
+    "sabarmati","ambawadi","ellis bridge","ashram road","cg road","sg highway",
+    "anandnagar","vejalpur","jodhpur","shyamal","memnagar","gurukul",
+    "naranpura","sola","science city","new ranip","ranip","nehrunagar","prahladnagar"
+  ];
+
+  var ALL_AREAS = [
+    "Bodakdev","Satellite","Vastrapur","Thaltej","Prahlad Nagar","Navrangpura",
+    "Maninagar","Paldi","Bopal","Ghatlodiya","Gota","Chandkheda","Motera",
+    "Sabarmati","Ambawadi","Ellis Bridge","Ashram Road","CG Road","SG Highway",
+    "Anandnagar","Vejalpur","Jodhpur","Shyamal","Memnagar","Gurukul",
+    "Naranpura","Sola","Science City","New Ranip","Ranip","Isanpur","Vatva",
+    "Odhav","Nikol","Vastral","Naroda","Bapunagar","Gomtipur","Rakhial",
+    "Krishnanagar","Danilimda","Asarwa","Shahibaug","Kankaria","Jamalpur",
+    "Kalupur","Dariapur","Madhupura","Dudheshwar","Nehrunagar"
+  ];
+
+  var toastYes = document.getElementById("toastYes");
+  var toastNo  = document.getElementById("toastNo");
+  var toastAreaYes = document.getElementById("toastAreaYes");
+  var toastAreaNo  = document.getElementById("toastAreaNo");
+  var requestPanel = document.getElementById("requestPanel");
+  var rapAreaName  = document.getElementById("rapAreaName");
+  var rapWhatsApp  = document.getElementById("rapWhatsApp");
+  var toastTimer;
+
+  function hideToasts() {
+    toastYes.classList.remove("show");
+    toastNo.classList.remove("show");
+  }
+
+  function showToastYes(area) {
+    clearTimeout(toastTimer);
+    hideToasts();
+    requestPanel.classList.remove("open");
+    toastAreaYes.textContent = area;
+    setTimeout(function() { toastYes.classList.add("show"); }, 50);
+    toastTimer = setTimeout(function() { toastYes.classList.remove("show"); }, 5000);
+  }
+
+  function showToastNo(area) {
+    clearTimeout(toastTimer);
+    hideToasts();
+    toastAreaNo.textContent = area;
+    setTimeout(function() { toastNo.classList.add("show"); }, 50);
+    toastTimer = setTimeout(function() {
+      toastNo.classList.remove("show");
+      openRequestPanel(area);
+    }, 2500);
+  }
+
+  function openRequestPanel(area) {
+    rapAreaName.textContent = area;
+    rapWhatsApp.href = "https://wa.me/918488051503?text=Hi%2C%20I%20need%20physiotherapy%20in%20" + encodeURIComponent(area) + "%2C%20Ahmedabad.%20Do%20you%20cover%20this%20area%3F";
+    requestPanel.classList.add("open");
+    requestPanel.scrollIntoView({ behavior: "smooth", block: "nearest" });
+  }
+
+  window.closeRequestPanel = function() {
+    requestPanel.classList.remove("open");
+  };
+
+window.handleMapSearch = function(val) {
+  var box = document.getElementById("map-suggestions");
+
+  val = val.trim().toLowerCase();
+
+  // ✅ show suggestions even for 1 letter
+  if (val.length < 1) {
+    box.style.display = "none";
+    return;
+  }
+
+  var matches = ALL_AREAS.filter(function(a) {
+    return a.toLowerCase().includes(val);
+  });
+
+  if (!matches.length) {
+    box.style.display = "none";
+    return;
+  }
+
+  box.innerHTML = matches.slice(0, 8).map(function(m) {
+    var covered = COVERED.includes(m.toLowerCase());
+    return '<div onclick="doMapSearch(\'' + m + '\')" ' +
+      'style="padding:10px 16px;cursor:pointer;font-size:14px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #f5f5f5;" ' +
+      'onmouseover="this.style.background=\'#f8fffe\'" ' +
+      'onmouseout="this.style.background=\'white\'">' +
+        '<span>' +
+          '<i class="fas fa-map-marker-alt" style="color:var(--teal);margin-right:6px;"></i>' +
+          m +
+        '</span>' +
+        '<span style="font-size:11px;padding:3px 8px;border-radius:20px;background:' + (covered ? '#e8f5e9' : '#ffebee') + ';color:' + (covered ? '#2e7d32' : '#c62828') + ';font-weight:600;">' +
+          (covered ? 'Available' : 'Not yet') +
+        '</span>' +
+      '</div>';
+    }).join("");
+
+    box.style.display = "block";
+  };
+
+  window.doMapSearch = function(query) {
+    var input = document.getElementById("map-search-input");
+    var box   = document.getElementById("map-suggestions");
+    if (input) input.value = query;
+    box.style.display = "none";
+
+    var isCovered = COVERED.indexOf(query.toLowerCase()) !== -1;
+
+    // Update map
+    fetch("https://nominatim.openstreetmap.org/search?q=" + encodeURIComponent(query + " Ahmedabad Gujarat India") + "&format=json&limit=1&countrycodes=in")
+      .then(function(r) { return r.json(); })
+      .then(function(data) {
+        if (data && data.length > 0) {
+          var lat = parseFloat(data[0].lat);
+          var lon = parseFloat(data[0].lon);
+          var delta = 0.025;
+          var bbox = (lon-delta) + "%2C" + (lat-delta) + "%2C" + (lon+delta) + "%2C" + (lat+delta);
+          document.getElementById("nirmaxis-map").src =
+            "https://www.openstreetmap.org/export/embed.html?bbox=" + bbox + "&layer=mapnik&marker=" + lat + "%2C" + lon;
+        }
+      }).catch(function(){});
+
+    // Show result
+    if (isCovered) {
+      showToastYes(query);
+    } else {
+      showToastNo(query);
+    }
+  };
+
+  // Close suggestions on outside click
+  document.addEventListener("click", function(e) {
+    if (!e.target.closest || !e.target.closest("#mapSearchCard")) {
+      document.getElementById("map-suggestions").style.display = "none";
+    }
+  });
+})();
+</script>
+      <!-- <div class="section-label">Recognition</div>
+      <h2 class="section-title">Awards & Certifications</h2>
+    </div>
+    <div class="awards-wrap">
+      <img src="images/certificate.png" alt="Patient's Choice Award — Dr. Nirma Sankhla" class="awards-cert-img">
+      <p class="awards-caption">Patient's Choice Award — Specialised Ortho Department<br><strong>Dr. Nirma Sankhla, Maninagar Branch</strong></p>
+    </div> -->
+  </div>
+</section>
+
+<section class="awards-section">
+  <div class="container">
+    <div class="section-header centered">
+      <div class="section-label">Recognition</div>
+      <h2 class="section-title">Awards & Certifications</h2>
+    </div>
+    <div class="awards-wrap">
+      <img src="images/certificate.png" alt="Patient's Choice Award — Dr. Nirma Sankhla" class="awards-cert-img">
+      <p class="awards-caption">Patient's Choice Award — Specialised Ortho Department<br><strong>Dr. Nirma Sankhla, Maninagar Branch</strong></p>
+    </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========= CONTACT / BOOKING ========= -->
+<section class="contact-section" id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="section-label">Get In Touch</div>
+        <h2 class="section-title">Book Your Home Visit</h2>
+        <p>Ready to start your recovery journey? Reach out and we'll confirm your appointment promptly.</p>
+
+        <div class="contact-details">
+          <div class="cd-item">
+            <div class="cd-icon"><i class="fas fa-phone-alt"></i></div>
+            <div>
+              <strong>Call / WhatsApp</strong>
+              <a href="tel:+918488051503">+91 8488051503</a>
+            </div>
+          </div>
+          <div class="cd-item">
+            <div class="cd-icon"><i class="fas fa-envelope"></i></div>
+            <div>
+              <strong>Email</strong>
+              <a href="mailto:dr.nirmasankhla.pt@gmail.com">dr.nirmasankhla.pt@gmail.com</a>
+            </div>
+          </div>
+          <div class="cd-item">
+            <div class="cd-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div>
+              <strong>Location</strong>
+              <span>Ahmedabad, Gujarat, India</span>
+            </div>
+          </div>
+          <div class="cd-item">
+            <div class="cd-icon"><i class="fas fa-clock"></i></div>
+            <div>
+              <strong>Working Hours</strong>
+              <span>7:00 AM – 8:00 PM, All Days</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="social-row">
+          <a href="https://www.instagram.com/dr.nirma_physio" target="_blank" class="soc-img-btn"><img src="images/ig.png" alt="Instagram"></a>
+          <a href="https://www.linkedin.com/in/dr-nirma-sankhla-314392186" target="_blank" class="soc-img-btn"><img src="images/linkedin.png" alt="LinkedIn"></a>
+          <a href="https://wa.me/918488051503" target="_blank" class="soc-img-btn"><img src="images/wp.png" alt="WhatsApp"></a>
+          <a href="mailto:dr.nirmasankhla.pt@gmail.com" class="soc-img-btn"><img src="images/mail.png" alt="Email"></a>
+        </div>
+
+        <div class="map-embed">
+          <iframe src="https://www.google.com/maps?q=Ahmedabad,Gujarat&output=embed" loading="lazy" title="Location Map"></iframe>
+        </div>
+      </div>
+
+      <div class="booking-form-wrap">
+        <h3>Book an Appointment</h3>
+        <form id="bookingForm">
+          <div class="form-row-2">
+            <div class="form-field">
+              <label>Full Name *</label>
+              <input type="text" id="fname" placeholder="Your full name" required>
+            </div>
+            <div class="form-field">
+              <label>Age *</label>
+              <input type="number" id="fage" placeholder="Age" min="1" max="120" required>
+            </div>
+          </div>
+          <div class="form-row-2">
+            <div class="form-field">
+              <label>Phone *</label>
+              <input type="tel" id="fphone" placeholder="10-digit number" pattern="[0-9]{10}" required>
+            </div>
+            <div class="form-field">
+              <label>Email *</label>
+              <input type="email" id="femail" placeholder="Your email" required>
+            </div>
+          </div>
+          <div class="form-field">
+            <label>Full Address *</label>
+            <input type="text" id="faddress" placeholder="Your home address" required>
+          </div>
+          <div class="form-row-2">
+            <div class="form-field">
+              <label>Area *</label>
+              <select id="farea" required>
+                <option value="">Select Area</option>
+                <option>Bodakdev</option>
+                <option>Satellite</option>
+                <option>Vastrapur</option>
+                <option>Thaltej</option>
+                <option>Prahlad Nagar</option>
+                <option>Navrangpura</option>
+                <option>Maninagar</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label>Service *</label>
+              <select id="fservice" required>
+                <option value="">Select Service</option>
+                <option>Neuro Physiotherapy</option>
+                <option>Orthopedic Rehabilitation</option>
+                <option>Sports Physiotherapy</option>
+                <option>Pediatric Physiotherapy</option>
+                <option>Post Surgery Rehab</option>
+                <option>Home Visit General</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row-2">
+            <div class="form-field">
+              <label>Preferred Date *</label>
+              <input type="date" id="fdate" required>
+            </div>
+            <div class="form-field">
+              <label>Time Slot *</label>
+              <select id="ftime" required>
+                <option value="">Select Time</option>
+                <option>07:00 AM</option>
+                <option>08:00 AM</option>
+                <option>09:00 AM</option>
+                <option>10:00 AM</option>
+                <option>11:00 AM</option>
+                <option>12:00 PM</option>
+                <option>02:00 PM</option>
+                <option>03:00 PM</option>
+                <option>04:00 PM</option>
+                <option>05:00 PM</option>
+                <option>06:00 PM</option>
+                <option>07:00 PM</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-field">
+            <label>Describe Your Condition</label>
+            <textarea id="fdesc" rows="3" placeholder="Briefly describe your pain or condition..."></textarea>
+          </div>
+          <div class="form-check">
+            <input type="checkbox" id="fconsent" required>
+            <label for="fconsent">I confirm the information is accurate and consent to treatment.</label>
+          </div>
+          <button type="submit" class="btn-primary full">Confirm Appointment →</button>
+          <div class="form-success-msg" id="formSuccess">
+            <i class="fas fa-check-circle"></i> Appointment submitted! We'll confirm shortly via WhatsApp.
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========= FOOTER ========= -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <img src="images/FullLogo_Transparent.png" alt="NIRMAXIS Logo" style="height:60px;filter:brightness(0) invert(1);opacity:.9;">
+      </div>
+      <p>Expert physiotherapy care at your home. Restoring movement, independence and quality of life across Ahmedabad.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <a href="services/neuro-physiotherapy.html">Neuro Physiotherapy</a>
+      <a href="services/orthopedic-physiotherapy.html">Orthopedic Therapy</a>
+      <a href="services/sports-physiotherapy.html">Sports Physiotherapy</a>
+      <a href="services/pediatric-physiotherapy.html">Pediatric Care</a>
+      <a href="services/post-surgery-rehabilitation.html">Post Surgery Rehab</a>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <a href="#home">Home</a>
+      <a href="#about">About Dr. Nirma</a>
+      <a href="#plans">Pricing Plans</a>
+      <a href="#contact">Book Appointment</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <p><i class="fas fa-phone-alt"></i> <a href="tel:+918488051503">+91 8488051503</a></p>
+      <p><i class="fas fa-envelope"></i> <a href="mailto:dr.nirmasankhla.pt@gmail.com">dr.nirmasankhla.pt@gmail.com</a></p>
+      <p><i class="fas fa-map-marker-alt"></i> Ahmedabad, Gujarat</p>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/dr.nirma_physio" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/dr-nirma-sankhla-314392186" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://wa.me/918488051503" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 NIRMAXIS Neuro & Ortho Rehabilitation. All rights reserved.</p>
+    <p>Designed with ❤ for better patient care</p>
+  </div>
+</footer>
+
+<!-- ========= FLOATING ACTION ========= -->
+<div class="float-panel" id="floatPanel">
+  <div class="float-actions" id="floatActions">
+    <a href="tel:+918488051503" class="float-action call" title="Call Now"><i class="fas fa-phone-alt"></i><span>Call</span></a>
+    <a href="https://wa.me/918488051503" target="_blank" class="float-action wa" title="WhatsApp"><i class="fab fa-whatsapp"></i><span>WhatsApp</span></a>
+    <a href="#contact" class="float-action book" title="Book Appointment"><i class="fas fa-calendar-check"></i><span>Book</span></a>
+  </div>
+  <button class="float-toggle" id="floatToggle" aria-label="Quick actions">
+    <i class="fas fa-plus"></i>
+  </button>
+</div>
+
+
+<!-- MEGA MENU PANEL — detached from header to avoid backdrop-filter stacking context -->
+<div class="mega-panel" id="megaPanel" role="region" aria-label="Services menu">
+
+  <!-- Top strip -->
+  <div class="mega-topstrip" aria-hidden="true">
+    <div class="mega-strip-stat"><i class="fas fa-star"></i><span><strong>5.0</strong> Rating on Google</span></div>
+    <div class="mega-strip-divider"></div>
+    <div class="mega-strip-stat"><i class="fas fa-house-medical"></i><span><strong>Home Visit</strong> Available</span></div>
+    <div class="mega-strip-divider"></div>
+    <div class="mega-strip-stat"><i class="fas fa-clock"></i><span><strong>7 AM – 8 PM</strong> All Days</span></div>
+    <div class="mega-strip-divider"></div>
+    <div class="mega-strip-stat"><i class="fas fa-location-dot"></i><span>Serving <strong>Ahmedabad</strong></span></div>
+  </div>
+
+  <!-- Body: left tabs + right panes -->
+  <div class="mega-body">
+
+    <!-- LEFT TABS -->
+    <nav class="mega-tabs" role="tablist" aria-label="Service categories">
+
+      <button class="mega-tab active" data-tab="neuro" role="tab" aria-selected="true" aria-controls="pane-neuro">
+        <div class="tab-icon"><i class="fas fa-brain"></i></div>
+        <div class="tab-text">
+          <span class="tab-name">Neurological Rehab</span>
+          <span class="tab-sub">Stroke, Parkinson's &amp; more</span>
+        </div>
+        <i class="fas fa-chevron-right tab-arrow"></i>
+      </button>
+
+      <button class="mega-tab" data-tab="nerve" role="tab" aria-selected="false" aria-controls="pane-nerve">
+        <div class="tab-icon"><i class="fas fa-network-wired"></i></div>
+        <div class="tab-text">
+          <span class="tab-name">Nerve Conditions</span>
+          <span class="tab-sub">Bell's Palsy, Neuropathy</span>
+        </div>
+        <i class="fas fa-chevron-right tab-arrow"></i>
+      </button>
+
+      <button class="mega-tab" data-tab="ortho" role="tab" aria-selected="false" aria-controls="pane-ortho">
+        <div class="tab-icon"><i class="fas fa-bone"></i></div>
+        <div class="tab-text">
+          <span class="tab-name">Orthopaedic &amp; MSK</span>
+          <span class="tab-sub">Back, joint &amp; spine pain</span>
+        </div>
+        <i class="fas fa-chevron-right tab-arrow"></i>
+      </button>
+
+      <button class="mega-tab" data-tab="sports" role="tab" aria-selected="false" aria-controls="pane-sports">
+        <div class="tab-icon"><i class="fas fa-person-running"></i></div>
+        <div class="tab-text">
+          <span class="tab-name">Sports Injuries</span>
+          <span class="tab-sub">ACL, Rotator Cuff &amp; more</span>
+        </div>
+        <i class="fas fa-chevron-right tab-arrow"></i>
+      </button>
+
+      <button class="mega-tab" data-tab="muscular" role="tab" aria-selected="false" aria-controls="pane-muscular">
+        <div class="tab-icon"><i class="fas fa-dumbbell"></i></div>
+        <div class="tab-text">
+          <span class="tab-name">Muscular Conditions</span>
+          <span class="tab-sub">Frozen Shoulder, Fibromyalgia</span>
+        </div>
+        <i class="fas fa-chevron-right tab-arrow"></i>
+      </button>
+
+      <button class="mega-tab" data-tab="postsurgery" role="tab" aria-selected="false" aria-controls="pane-postsurgery">
+        <div class="tab-icon"><i class="fas fa-kit-medical"></i></div>
+        <div class="tab-text">
+          <span class="tab-name">Post-Surgical Rehab</span>
+          <span class="tab-sub">TKR, THR &amp; fractures</span>
+        </div>
+        <i class="fas fa-chevron-right tab-arrow"></i>
+      </button>
+
+      <button class="mega-tab" data-tab="pediatric" role="tab" aria-selected="false" aria-controls="pane-pediatric">
+        <div class="tab-icon"><i class="fas fa-baby"></i></div>
+        <div class="tab-text">
+          <span class="tab-name">Paediatric Care</span>
+          <span class="tab-sub">Cerebral Palsy, Erb's Palsy</span>
+        </div>
+        <i class="fas fa-chevron-right tab-arrow"></i>
+      </button>
+
+      <button class="mega-tab" data-tab="geriatric" role="tab" aria-selected="false" aria-controls="pane-geriatric">
+        <div class="tab-icon"><i class="fas fa-person-cane"></i></div>
+        <div class="tab-text">
+          <span class="tab-name">Geriatric Care</span>
+          <span class="tab-sub">Fall prevention, balance</span>
+        </div>
+        <i class="fas fa-chevron-right tab-arrow"></i>
+      </button>
+
+      <button class="mega-tab" data-tab="womens" role="tab" aria-selected="false" aria-controls="pane-womens">
+        <div class="tab-icon"><i class="fas fa-heart"></i></div>
+        <div class="tab-text">
+          <span class="tab-name">Women's Health</span>
+          <span class="tab-sub">Pelvic floor, prenatal care</span>
+        </div>
+        <i class="fas fa-chevron-right tab-arrow"></i>
+      </button>
+
+    </nav><!-- /mega-tabs -->
+
+    <!-- RIGHT CONTENT PANES -->
+    <div class="mega-content">
+
+      <!-- NEURO -->
+      <div class="mega-pane active" id="pane-neuro" role="tabpanel">
+        <div class="pane-header">
+          <div class="pane-header-icon"><i class="fas fa-brain"></i></div>
+          <div><h3 class="pane-title">Neurological Physiotherapy</h3><p class="pane-desc">Advanced neuro-rehab at your home — restoring movement and independence.</p></div>
+        </div>
+        <div class="pane-groups">
+          <div class="pane-group-title">Conditions Treated</div>
+          <ul class="treatment-list">
+            <li><a href="#" onclick="openService('neuro');return false;">Stroke — Hemiplegia / Hemiparesis</a></li>
+            <li><a href="#" onclick="openService('neuro');return false;">Parkinson's Disease</a></li>
+            <li><a href="#" onclick="openService('neuro');return false;">Multiple Sclerosis</a></li>
+            <li><a href="#" onclick="openService('neuro');return false;">Traumatic Brain Injuries</a></li>
+            <li><a href="#" onclick="openService('neuro');return false;">Spinal Cord Injuries</a></li>
+            <li><a href="#" onclick="openService('neuro');return false;">Ataxia</a></li>
+          </ul>
+          <div class="pane-group-title">Techniques</div>
+          <ul class="treatment-list">
+            <li><a href="#" onclick="openService('neuro');return false;">Bobath / NDT Therapy</a></li>
+            <li><a href="#" onclick="openService('neuro');return false;">Gait Re-education</a></li>
+            <li><a href="#" onclick="openService('neuro');return false;">TENS / NMES Therapy</a></li>
+            <li><a href="#" onclick="openService('neuro');return false;">Balance &amp; Coordination</a></li>
+          </ul>
+        </div>
+        <div class="pane-footer">
+          <a href="#" onclick="openService('neuro');return false;" class="pane-cta">Explore Neuro Rehab <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- NERVE -->
+      <div class="mega-pane" id="pane-nerve" role="tabpanel">
+        <div class="pane-header">
+          <div class="pane-header-icon"><i class="fas fa-network-wired"></i></div>
+          <div><h3 class="pane-title">Nerve Conditions</h3><p class="pane-desc">Specialized treatment for peripheral nerve injuries and conditions.</p></div>
+        </div>
+        <div class="pane-groups">
+          <div class="pane-group-title">Conditions Treated</div>
+          <ul class="treatment-list">
+            <li><a href="#" onclick="openService('neuro');return false;">Bell's Palsy</a></li>
+            <li><a href="#" onclick="openService('neuro');return false;">Peripheral Neuropathy</a></li>
+            <li><a href="#" onclick="openService('neuro');return false;">Guillain-Barré Syndrome</a></li>
+            <li><a href="#" onclick="openService('neuro');return false;">Nerve Injury / Brachial Plexus</a></li>
+            <li><a href="#" onclick="openService('neuro');return false;">Nerve Entrapment Syndromes</a></li>
+          </ul>
+          <div class="pane-group-title">Techniques</div>
+          <ul class="treatment-list">
+            <li><a href="#" onclick="openService('neuro');return false;">Nerve Mobilization</a></li>
+            <li><a href="#" onclick="openService('neuro');return false;">Facial Muscle Retraining</a></li>
+            <li><a href="#" onclick="openService('neuro');return false;">Sensory Re-education</a></li>
+            <li><a href="#" onclick="openService('neuro');return false;">NMES &amp; Electrical Stim</a></li>
+          </ul>
+        </div>
+        <div class="pane-footer">
+          <a href="#" onclick="openService('neuro');return false;" class="pane-cta">Explore Nerve Rehab <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- ORTHO -->
+      <div class="mega-pane" id="pane-ortho" role="tabpanel">
+        <div class="pane-header">
+          <div class="pane-header-icon"><i class="fas fa-bone"></i></div>
+          <div><h3 class="pane-title">Orthopaedic &amp; MSK Physiotherapy</h3><p class="pane-desc">Back pain, joint problems, spine conditions — treated at home.</p></div>
+        </div>
+        <div class="pane-groups">
+          <div class="pane-group-title">Back &amp; Neck</div>
+          <ul class="treatment-list">
+            <li><a href="#" onclick="openService('ortho');return false;">Sciatica / Herniated Disc</a></li>
+            <li><a href="#" onclick="openService('ortho');return false;">Chronic Lower Back Pain</a></li>
+            <li><a href="#" onclick="openService('ortho');return false;">Tech Neck / Cervical Pain</a></li>
+            <li><a href="#" onclick="openService('ortho');return false;">Spondylitis / Radiculopathy</a></li>
+          </ul>
+          <div class="pane-group-title">Joints &amp; Arthritis</div>
+          <ul class="treatment-list">
+            <li><a href="#" onclick="openService('ortho');return false;">Osteoarthritis (OA) Knee</a></li>
+            <li><a href="#" onclick="openService('ortho');return false;">Rheumatoid Arthritis</a></li>
+            <li><a href="#" onclick="openService('ortho');return false;">Gout</a></li>
+            <li><a href="#" onclick="openService('ortho');return false;">Frozen Shoulder</a></li>
+          </ul>
+        </div>
+        <div class="pane-footer">
+          <a href="#" onclick="openService('ortho');return false;" class="pane-cta">Explore Ortho Physio <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- SPORTS -->
+      <div class="mega-pane" id="pane-sports" role="tabpanel">
+        <div class="pane-header">
+          <div class="pane-header-icon"><i class="fas fa-person-running"></i></div>
+          <div><h3 class="pane-title">Sports Physiotherapy</h3><p class="pane-desc">Recover faster from sports injuries and return to peak performance.</p></div>
+        </div>
+        <div class="pane-groups">
+          <div class="pane-group-title">Knee &amp; Leg Injuries</div>
+          <ul class="treatment-list">
+            <li><a href="#" onclick="openService('sports');return false;">ACL / MCL / PCL Injuries</a></li>
+            <li><a href="#" onclick="openService('sports');return false;">Meniscus Injury</a></li>
+            <li><a href="#" onclick="openService('sports');return false;">Ankle Sprain</a></li>
+            <li><a href="#" onclick="openService('sports');return false;">Achilles Tendon</a></li>
+          </ul>
+          <div class="pane-group-title">Shoulder &amp; Arm</div>
+          <ul class="treatment-list">
+            <li><a href="#" onclick="openService('sports');return false;">Rotator Cuff Injury</a></li>
+            <li><a href="#" onclick="openService('sports');return false;">Tennis / Golfer's Elbow</a></li>
+            <li><a href="#" onclick="openService('sports');return false;">Shoulder Dislocation</a></li>
+            <li><a href="#" onclick="openService('sports');return false;">Labral Tear</a></li>
+          </ul>
+        </div>
+        <div class="pane-footer">
+          <a href="#" onclick="openService('sports');return false;" class="pane-cta">Explore Sports Physio <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- MUSCULAR -->
+      <div class="mega-pane" id="pane-muscular" role="tabpanel">
+        <div class="pane-header">
+          <div class="pane-header-icon"><i class="fas fa-dumbbell"></i></div>
+          <div><h3 class="pane-title">Muscular Conditions</h3><p class="pane-desc">Treatment for chronic muscular pain, stiffness and soft tissue disorders.</p></div>
+        </div>
+        <div class="pane-groups">
+          <div class="pane-group-title">Conditions Treated</div>
+          <ul class="treatment-list">
+            <li><a href="#" onclick="openService('ortho');return false;">Frozen Shoulder / Adhesive Capsulitis</a></li>
+            <li><a href="#" onclick="openService('ortho');return false;">Fibromyalgia</a></li>
+            <li><a href="#" onclick="openService('ortho');return false;">Polymyositis</a></li>
+            <li><a href="#" onclick="openService('ortho');return false;">Muscle Atrophy</a></li>
+            <li><a href="#" onclick="openService('ortho');return false;">Hamstring Strain</a></li>
+            <li><a href="#" onclick="openService('ortho');return false;">Posture Correction</a></li>
+          </ul>
+        </div>
+        <div class="pane-footer">
+          <a href="#" onclick="openService('ortho');return false;" class="pane-cta">Book a Session <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- POST SURGERY -->
+      <div class="mega-pane" id="pane-postsurgery" role="tabpanel">
+        <div class="pane-header">
+          <div class="pane-header-icon"><i class="fas fa-kit-medical"></i></div>
+          <div><h3 class="pane-title">Post-Surgical Rehabilitation</h3><p class="pane-desc">Complete recovery protocols for all orthopaedic and surgical procedures.</p></div>
+        </div>
+        <div class="pane-groups">
+          <div class="pane-group-title">Surgeries We Rehabilitate</div>
+          <ul class="treatment-list">
+            <li><a href="#" onclick="openService('postsurgery');return false;">Total Knee Replacement (TKR)</a></li>
+            <li><a href="#" onclick="openService('postsurgery');return false;">Total Hip Replacement (THR)</a></li>
+            <li><a href="#" onclick="openService('postsurgery');return false;">ACL / PCL Reconstruction</a></li>
+            <li><a href="#" onclick="openService('postsurgery');return false;">Spinal Surgery Rehab</a></li>
+            <li><a href="#" onclick="openService('postsurgery');return false;">Fracture Fixation (ORIF)</a></li>
+            <li><a href="#" onclick="openService('postsurgery');return false;">Rotator Cuff Repair</a></li>
+          </ul>
+        </div>
+        <div class="pane-footer">
+          <a href="#" onclick="openService('postsurgery');return false;" class="pane-cta">Explore Post-Surgery Rehab <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- PEDIATRIC -->
+      <div class="mega-pane" id="pane-pediatric" role="tabpanel">
+        <div class="pane-header">
+          <div class="pane-header-icon"><i class="fas fa-baby"></i></div>
+          <div><h3 class="pane-title">Paediatric Physiotherapy</h3><p class="pane-desc">Gentle, play-based therapy helping children reach their full potential.</p></div>
+        </div>
+        <div class="pane-groups">
+          <div class="pane-group-title">Conditions We Support</div>
+          <ul class="treatment-list">
+            <li><a href="#" onclick="openService('pediatric');return false;">Cerebral Palsy</a></li>
+            <li><a href="#" onclick="openService('pediatric');return false;">Developmental Delays</a></li>
+            <li><a href="#" onclick="openService('pediatric');return false;">Down Syndrome</a></li>
+            <li><a href="#" onclick="openService('pediatric');return false;">Erb's Palsy</a></li>
+            <li><a href="#" onclick="openService('pediatric');return false;">Muscular Dystrophy</a></li>
+            <li><a href="#" onclick="openService('pediatric');return false;">Gait Abnormalities</a></li>
+          </ul>
+        </div>
+        <div class="pane-footer">
+          <a href="#" onclick="openService('pediatric');return false;" class="pane-cta">Explore Paediatric Care <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- GERIATRIC -->
+      <div class="mega-pane" id="pane-geriatric" role="tabpanel">
+        <div class="pane-header">
+          <div class="pane-header-icon"><i class="fas fa-person-cane"></i></div>
+          <div><h3 class="pane-title">Geriatric Care</h3><p class="pane-desc">Keeping seniors safe, mobile and independent with expert home physio.</p></div>
+        </div>
+        <div class="pane-groups">
+          <div class="pane-group-title">Conditions We Manage</div>
+          <ul class="treatment-list">
+            <li><a href="#" onclick="openService('geriatric');return false;">Fall Prevention</a></li>
+            <li><a href="#" onclick="openService('geriatric');return false;">Osteoporosis Management</a></li>
+            <li><a href="#" onclick="openService('geriatric');return false;">Balance &amp; Gait Problems</a></li>
+            <li><a href="#" onclick="openService('geriatric');return false;">Muscle Weakness (Sarcopenia)</a></li>
+            <li><a href="#" onclick="openService('geriatric');return false;">Post-fracture Rehab</a></li>
+            <li><a href="#" onclick="openService('geriatric');return false;">Post-hospitalization Recovery</a></li>
+          </ul>
+        </div>
+        <div class="pane-footer">
+          <a href="#" onclick="openService('geriatric');return false;" class="pane-cta">Explore Geriatric Care <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- WOMEN'S HEALTH -->
+      <div class="mega-pane" id="pane-womens" role="tabpanel">
+        <div class="pane-header">
+          <div class="pane-header-icon"><i class="fas fa-heart"></i></div>
+          <div><h3 class="pane-title">Women's Health Physiotherapy</h3><p class="pane-desc">Specialized care for every stage of a woman's life — private and sensitive.</p></div>
+        </div>
+        <div class="pane-groups">
+          <div class="pane-group-title">Conditions We Treat</div>
+          <ul class="treatment-list">
+            <li><a href="#" onclick="openService('womens');return false;">Pelvic Floor Dysfunction</a></li>
+            <li><a href="#" onclick="openService('womens');return false;">Urinary Incontinence</a></li>
+            <li><a href="#" onclick="openService('womens');return false;">Prenatal Physiotherapy</a></li>
+            <li><a href="#" onclick="openService('womens');return false;">Postnatal Recovery</a></li>
+            <li><a href="#" onclick="openService('womens');return false;">Post C-section Rehab</a></li>
+            <li><a href="#" onclick="openService('womens');return false;">Pelvic Girdle Pain (SPD)</a></li>
+          </ul>
+        </div>
+        <div class="pane-footer">
+          <a href="#" onclick="openService('womens');return false;" class="pane-cta">Explore Women's Health <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+    </div><!-- /mega-content -->
+  </div><!-- /mega-body -->
+</div><!-- /mega-panel -->
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+/* ========= BLOGS — Public Website ========= */
+(function() {
+  var FIREBASE_CONFIG = {
+    apiKey: "AIzaSyD-c374sqQnu_vHrwc9rj4czjV7fNOPXK4",
+    authDomain: "nirmaxis-dashboard.firebaseapp.com",
+    projectId: "nirmaxis-dashboard",
+  };
+
+  function formatDate(ts) {
+    if (!ts) return "";
+    var d = ts.seconds ? new Date(ts.seconds * 1000) : new Date(ts);
+    return d.toLocaleDateString("en-IN", { day:"2-digit", month:"short", year:"numeric" });
+  }
+
+  async function fetchBlogs() {
+    try {
+      var url = "https://firestore.googleapis.com/v1/projects/" + FIREBASE_CONFIG.projectId +
+        "/databases/(default)/documents/blogs?pageSize=20&key=" + FIREBASE_CONFIG.apiKey;
+      var res = await fetch(url);
+      var data = await res.json();
+      if (!data.documents) return [];
+      return data.documents
+        .map(function(doc) {
+          var f = doc.fields || {};
+          return {
+            id: doc.name.split("/").pop(),
+            title:    f.title?.stringValue    || "",
+            excerpt:  f.excerpt?.stringValue  || "",
+            category: f.category?.stringValue || "General",
+            content:  f.content?.stringValue  || "",
+            published:f.published?.booleanValue || false,
+            createdAt:f.createdAt?.timestampValue ? { seconds: Math.floor(new Date(f.createdAt.timestampValue).getTime() / 1000) } : null,
+          };
+        })
+        .filter(function(b) { return b.published; })
+        .sort(function(a,b) { var as=(a.createdAt&&a.createdAt.seconds)||0; var bs=(b.createdAt&&b.createdAt.seconds)||0; return bs-as; });
+    } catch(e) { console.error("Blogs fetch error:", e); return []; }
+  }
+
+  function openBlogModal(blog) {
+    var overlay = document.createElement("div");
+    overlay.className = "blog-modal-overlay";
+    overlay.innerHTML =
+      '<div class="blog-modal">' +
+        '<div class="blog-modal-header">' +
+          '<div style="flex:1;padding-right:16px">' +
+            '<span style="font-size:11px;font-weight:700;background:rgba(255,255,255,0.15);color:rgba(255,255,255,0.9);padding:3px 10px;border-radius:50px;text-transform:uppercase">' + (blog.category||"General") + '</span>' +
+            '<h2 style="font-size:22px;font-weight:700;color:white;margin-top:10px;line-height:1.3;font-family:\'Cormorant Garamond\',serif">' + blog.title + '</h2>' +
+            '<div style="font-size:12px;color:rgba(255,255,255,0.6);margin-top:8px">📅 ' + formatDate(blog.createdAt) + '</div>' +
+          '</div>' +
+          '<button onclick="this.closest(\'.blog-modal-overlay\').remove();document.body.style.overflow=\'\'" style="background:rgba(255,255,255,0.15);border:none;color:white;width:36px;height:36px;border-radius:50%;font-size:20px;cursor:pointer;flex-shrink:0">×</button>' +
+        '</div>' +
+        '<div class="blog-modal-content">' + blog.content + '</div>' +
+        '<div class="blog-modal-footer">' +
+          '<div style="font-size:13px;color:var(--text-mid)">📞 Questions? Call <strong>+91 8488051503</strong></div>' +
+          '<a href="#contact" style="background:var(--teal);color:white;padding:10px 22px;border-radius:8px;font-size:13px;font-weight:600;text-decoration:none">Book Appointment →</a>' +
+        '</div>' +
+      '</div>';
+    overlay.addEventListener("click", function(e) {
+      if (e.target === overlay) { overlay.remove(); document.body.style.overflow = ""; }
+    });
+    document.body.appendChild(overlay);
+    document.body.style.overflow = "hidden";
+  }
+
+  function renderBlogs(blogs) {
+    var grid = document.getElementById("blogs-grid");
+    if (!grid) return;
+    if (blogs.length === 0) {
+      grid.innerHTML = '<div style="grid-column:1/-1;text-align:center;padding:60px;color:var(--text-light)"><div style="font-size:44px;margin-bottom:12px">📝</div><p>No articles yet. Check back soon!</p></div>';
+      return;
+    }
+    grid.innerHTML = blogs.map(function(b) {
+      return '<div class="blog-card" data-id="' + b.id + '">' +
+        '<div class="blog-card-accent"></div>' +
+        '<div class="blog-card-body">' +
+          '<span class="blog-category">' + (b.category||"General") + '</span>' +
+          '<h3 class="blog-title">' + b.title + '</h3>' +
+          (b.excerpt ? '<p class="blog-excerpt">' + b.excerpt + '</p>' : '') +
+          '<div class="blog-footer">' +
+            '<span class="blog-date">📅 ' + formatDate(b.createdAt) + '</span>' +
+            '<span class="blog-read">Read more →</span>' +
+          '</div>' +
+        '</div>' +
+      '</div>';
+    }).join("");
+
+    var blogMap = {};
+    blogs.forEach(function(b) { blogMap[b.id] = b; });
+    grid.querySelectorAll(".blog-card").forEach(function(card) {
+      card.addEventListener("click", function() {
+        openBlogModal(blogMap[card.dataset.id]);
+      });
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", function() {
+    fetchBlogs().then(renderBlogs);
+  });
+})();
+</script>
+
+
+
+</body>
+</html>
